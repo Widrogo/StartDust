@@ -6,45 +6,71 @@ Stardust is an application that displays data interactively asteroids that are d
 
 the scale size of asteroids were increased to distinguish better if they would not be very small.
 
-## Design and calculation of asteroids ##
+## Design of asteroids ##
 
 
 although each asteroid is not defined by a radius, they have elongated shapes and irregular, in the application calculate an approximate radius, why? good to accurately each asteroid had hampered the development, working with d3.js therefore to show shape and objects, use the SVG (Scalable Vector Graphics) and use <circle /> to plot each asteroid.
 This java library provides a way to read the Minor Planet Catalogues provided by the Minor Planets Center.
 
 
-## Dependencies ##
+## As we calculate the orbit ##
 
-We have artifacts hosted on Maven Central. http://search.maven.org/#search|ga|1|mpc-reader 
 
+Well first application is 2d, to calculate the orbits we use fewer variables, also imagine the orbits as ellipses also use the laws of Kepler, Kepler's laws apply to any celestial body in space.
+
+first Klepler's law: The orbit of a planet is an ellipse with the Sun at one of the two foci.
+
+Second Klepler's Law: A line segment joining a planet and the Sun sweeps out equal areas During equal intervals of time.
+
+third Klepler's law: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of Its orbit.
+
+Kepler's law applies to elliptical orbits of any body in space. Newton founded the universal law of gravitation based on these laws.
+
+we obtain data from an asteroid object, which has the following format:
+
+```javascript var asteroids = [
+        {
+                "major":276.75,
+                "minor":274.36,
+                "e":0.075823,
+                "focus":36.29,
+                "r":313.04,
+                "cx":0,
+                "cy":0,
+                "x":276.75,
+                "y":0,
+                "theta": 0,
+                "ID":2,
+                "Radius":0.24,
+                "period":1681.601,
+                "speed":17.905,
+                "name":"CERES",
+                "discovered":2009,
+                "class":"F",
+                "temp":6475
+        }];```
+
+the data are calculated as follows:
+
+the first data we obtained with the eccentricity "e" and Semi-major axis "major"
+
+calculate:
+
+Semi-major axis  "minor"
+
+minor= major
 
 ## Usage ##
 
-To construct a reader you first need a ```com.wselwood.mpcreader.MinorPlanetReaderBuilder``` this will allow you to set the needed options on the reader before construction.
-
-The one required option is the file to open set with the ```open(File f)``` method.
-
-If the file is gzip compressed the builder will detect this. It looks at the first two bytes of the file having the gzip header so it doesn't matter if the file does not have the .gz extension. If some how this goes wrong you can set ```compressed()``` or ```unCompressed()``` on the builder to turn on or off compressed reading.
-
-Calling the ```convertAngles()``` method on the builder will convert all the angles in the file into radians rather than degrees. This may be useful if you are doing any orbital calculations as most of the java maths functions take radian angles. Note this will induce a small rounding error from dividing double values.
-
-Finally when you have your builder in the state you want call the ```build()``` method which will construct the ```com.wselwood.mpcreader.MinorPlanetReader``` Note this method can throw an IOException
-
-The reader class provides two methods ```hasNext()``` which returns true if there are more records in the file. and ```next()``` which returns the next record.
-
-Both these methods can throw IOExceptions and the next method can throw ```com.wselwood.mpcreader.InvalidDataException``` if the record will not parse for some reason. If you get this happen I suggest you re-download the file as it is probably corrupt.
-
-The next method returns a ```com.wselwood.mpcreader.MinorPlanet``` object which contains the decoded details for a minor planet. This class is immutable. You are not expected to ever want to construct these your self.
-
-Finally there is a ```close()``` method on the reader which will close down the file handle. This should always be called when you are done with the reader.
 
 
-## Building ##
+## Run project ##
 
-If you want to checkout and build the project follow these steps:
+If you want to checkout and run the project follow these steps:
 
-## Change log ##
+``` git clone https://github.com/Widrogo/StartDust.git```
 
-v0.1.1 Fix timezone bug in unpacked dates.
+ and open the index.html in any explorer
+## Refers ##
 
-v0.1.0 Initial release
+https://www.khanacademy.org/computer-programming/elliptic-orbit-with-the-correct-speed/1979432907
