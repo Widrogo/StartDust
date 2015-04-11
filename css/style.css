@@ -1,0 +1,343 @@
+body {
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	vertical-align: middle;
+    background-image: url("../img/galaxy_smalt.jpg");
+    cursor: default;
+}		
+
+.bigButton {
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-color: white;
+  cursor: pointer;	
+  visibility: auto;
+}
+
+#start {
+  top: 90%;
+  left: 47%;
+  height: 33px;
+  width: 112px;
+  position: absolute;
+}
+
+#crazy {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  height: 33px;
+  width: 112px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+span { 
+	display:inline-block;
+	vertical-align:middle
+}
+
+#buttonWrapper{
+  z-index: 1;
+  display: block;
+  font-family: Oswald;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+  left: 30%;
+  bottom: 90%;
+  width: 640px;
+  text-align: center;
+  overflow: hidden;
+  visibility: auto;
+}
+
+.sideButton {
+  float: left;
+  cursor: pointer;
+    width: 110px;
+    border: 1px solid;
+    border-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sideButton a {
+	text-decoration: none;
+	color: white;
+
+}
+
+.sideButtonInv {
+  float: left;
+  cursor: pointer;
+  width: 80px;
+  opacity: 0;
+  cursor: pointer;
+    width: 110px;
+    border: 1px solid;
+    border-color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bar {
+	float: left;	
+	width: 15px;
+}
+
+#color {  
+	visibility: hidden;
+}
+
+#tooltipInfo {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 12px;
+	color: white;
+	visibility: hidden;
+}
+
+#name {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	font-size: 10px;
+	color: white;
+}
+#name a {
+	text-decoration: none;
+	color: #CCCCCC;
+}
+	
+.title {
+  font-family: Oswald;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  text-align: left;	
+}
+
+.intro {
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+
+}
+
+.explanation {
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  text-anchor: middle;	
+}
+
+.legend {
+  font-size: 11px;
+  font-weight: 300;
+  color: white;
+  fill: white;
+}
+
+.legendTitle {
+  font-family: Oswald;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  fill: white;
+}
+
+.progressWrapper {
+	cursor: pointer;
+	z-index: 1;
+}
+
+/* box */
+
+
+#information {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    z-index: -1000;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    /*height: 100px;*/
+    border-radius: 3px;
+    background: rgba(255,255,255,0.93);
+    color: #292929;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    border:1px solid rgba(200,200,200,0.85);
+    text-align:left;
+    font-size: 12px;
+}
+
+#infoContainer {
+    padding: 15px;
+}
+
+#infoInnerWrapper {
+    padding: 15px;
+    padding-top: 0px;
+    font-size: 11px;
+}
+
+#infoTitle {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color:#333333;
+    text-align:center;
+}
+
+#infoRule{
+    height:1px;
+    margin:1px auto 3px;
+    margin-bottom: 6px;
+    background:#969696;
+    width:200px;
+}
+
+#information  h3{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 5px;
+    margin-bottom: 2px;
+}
+
+#information  a{
+    color: #292929;
+}
+
+#infoClose {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../img/close.png);
+    background-size: 95% 95%;
+    background-repeat: no-repeat;
+    top: 10px;
+    right: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* tooltip */
+
+#tooltip-Container {
+    position: absolute;
+    bottom: 0;
+    width: 230px;
+    left: -115px; /* 230/2*/
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    border:1px solid rgba(200,200,200,0.85);
+    text-align:center;
+    cursor: default;
+}
+
+#tooltip {
+    text-align:center;
+    z-index: 1000;
+    position: absolute;
+    opacity: 0;
+}
+
+#tooltip .tooltip-tail {
+    position: absolute;
+    bottom: -8px;
+    left: 105px;
+    width: 40px;
+    height: 8px;
+    background: url(../img/tail_white.png) 50% 0%;
+}
+
+#tooltip .tooltip-asteroid{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color:#333333;
+    text-align:center;
+}
+
+#tooltip .tooltip-rule{
+    height:1px;
+    margin:1px auto 3px;
+    background:#ddd;
+    width:130px;
+}
+
+#tooltip .tooltip-year{
+    color:#666;
+    font-size: 11px;
+    text-align:center;
+    margin-bottom: 6px;
+    font-style:italic;
+}
+#tooltip .tooltip-class {
+    color:#333333;
+    text-align: left;
+    font-size: 13px;
+    text-align:center;
+    margin-bottom: 4px;
+}
+.tooltip-info {
+    color:#333333;
+    font-size: 12px;
+    text-align:center;
+    overflow:hidden;
+    margin-bottom: 2px;
+}
+
+/* tooltip */
+
+#blanket {
+    background-color:#111;
+    opacity: 0.65;
+    *background:none;
+    position:absolute;
+    z-index: 9001;
+    top:0px;
+    left:0px;
+    width:100%;
+}
+
+#popUpDiv {
+    position:absolute;
+    background:url(pop-back.jpg) no-repeat;
+    width:400px;
+    height:400px;
+    border:5px solid #000;
+    z-index: 9002;
+}
+
+#popUpDiv a {
+    position:relative;
+    top:20px;
+    left:20px
+}

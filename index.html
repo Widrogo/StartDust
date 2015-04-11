@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+      <script src="js/d3.min.js"></script>
+        <!-- Google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  	    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    </head>
+  <body>
+
+	<!-- Button to start introduction -->
+	<div id="start" class="bigButton"><span>INTRODUCION</span></div>
+
+	<!-- Chart -->
+    <div id="planetarium"></div>
+
+	<!-- Ribbon of buttons at the bottom -->
+
+	<div id="buttonWrapper">
+        <div class="bar"><br/></div><div id="info" 		class="sideButton">Informacion</div>
+        <div class="bar"><br/></div><div id="remove" 	class="sideButton">Satar Intro</div>
+        <div class="bar"><br/></div><div id="reset" 	class="sideButton">Reiniciar</div>
+        <div class="bar"><br/></div><div id="scale" 	class="sideButton">Asteroides en Escala</div>
+        <div class="bar"><br/></div><div id="link" 		class="sideButton"><a href="https://github.com/Widrogo/StartDust"  target="_blank">Codigo</a></div>
+        <div class="bar"><br/></div><div id="color" 	class="sideButtonInv">Colorizar</div>
+	</div>
+
+
+	<!-- Easter Egg -->
+	<div id="crazy" class="bigButton"><span>COLORIZAR</span></div>
+
+	<!-- Information pop-up-->
+	<div id="information">
+		<div id="infoContainer">
+			<div id="infoTitle">Informacion</div>
+			<div id="infoRule"></div>
+			<div id="infoText">
+				<span>  Esta visualización muestra las órbitas de algunos asteroides, tomando la excentricidad de la órbita
+                        y segunda ley de Kepler en cuenta. Las órbitas de los asteroides se han reducido a la scala de del planetario.
+                        La estrella en el centro es una escala al tamaño de nuestro Sol en comparación con las órbitas.<br/>
+                        Los tamaños de los planetas estan a escala también, pero no a las órbitas. De lo contrario, la
+                        mayoría de los asteroides serían extremadamente pequeño (más pequeño que un pixel).</span>
+                <br/>
+
+				<div id="infoInnerWrapper">
+					<h3>Unidad Astronomica (UA)</h3>
+					<span>Una unidad astronómica es una unidad de longitud, aproximadamente la distancia entre la Tierra y
+                        el Sol Sin embargo, esta distancia varía mientras la Tierra gira alrededor del Sol, de un máximo
+                        (afelio) al mínimo (perihelio) y de nuevo una vez al año. Ahora se define como unos 150 millones
+                        de kilómetros, o 93.000.000 millas</span>
+
+					<h3>Excentricidad</h3>
+					<span>Aunque algunos objetos siguen órbitas circulares, la mayoría de las órbitas
+                          son mas comocirculos estiradas: elipses. Una elipse puede ser muy larga y delgada,
+                          o puede ser como un círculo. <br>
+
+						  En matemática y geometría la excentricidad, ε (épsilon) es un parámetro que determina el
+                          grado de desviación de una sección cónica con respecto a una circunferencia.
+                          Si la excentricidad es cercano a uno, la elipse es larga y delgada. Si la excentricidad
+                          es cercano a cero, la elipse es como un círculo.<br>
+
+						  La excentricidad de la órbita terrestre es sólo 0,02, por lo que la órbita de la Tierra es casi circular.
+                          Muchos cometas tienen órbitas muy excéntricas. El cometa Halley tiene una excentricidad orbital de casi 0.97!<br>
+
+                          La estrella no está en el centro de una órbita elíptica. Es un poco a un lado,
+                          en un punto llamado un "foco" de la elipse. A causa de este desplazamiento el planeta
+                          se mueve más cerca de y más lejos de la estrella en cada órbita. El punto de cierre en
+                          cada órbita se llama "perihelio". El punto lejano se llama "afelio". De una órbita
+                          tiene una gran excentricidad, la diferencia entre el perihelio y afelio distancia será grande.
+                          La Tierra es sólo un 3% más lejos del Sol en el afelio de lo que es en el perihelio.
+                          Excentricidad de Plutón es de 0.25 y su distancia afelio del Sol es 66% mayor que su
+                          distancia del perihelio
+
+						  <sup><a href="http://es.wikipedia.org/wiki/Excentricidad_%28matem%C3%A1tica%29" target="_blank">1</a></sup>.</span>
+
+					<h3>Semi-Major Axis</h3>
+					<span>Los ejes semi-mayor y semi-menor de una elipse son los radios de la elipse.
+                          El semieje mayor es el radio más largo y el semi-eje menor el más corto.
+                          Si son iguales en longitud a continuación, la elipse es un círculo.</span>
+
+
+				</div>
+				<div id="infoClose"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Create div structure for Tooltip -->
+	<div id="tooltip">
+		<div id="tooltip-Container">
+			<div class="tooltip-asteroid"></div>
+			<div class="tooltip-rule"></div>
+			<div class="tooltip-year"></div>
+			<div id="tooltip-radius"	class="tooltip-info"></div>
+			<div id="tooltip-dist" 		class="tooltip-info"></div>
+			<div id="tooltip-period" 	class="tooltip-info"></div>
+			<div id="tooltip-eccen" 	class="tooltip-info"></div>
+			<div id="tooltip-class" 	class="tooltip-info"></div>
+
+		</div>
+	</div>
+
+	<!-- Separate functions that became too big for the main script -->
+	<script src="js/functions.js"></script>
+	<script src="data/asteroids.js"></script>	<!-- data -->
+	<script src="js/effecs.js"></script>
+    <script src="js/start.js"></script>
+  </body>
+</html>
