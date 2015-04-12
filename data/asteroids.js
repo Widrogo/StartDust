@@ -11,10 +11,10 @@ var asteroids = [
         "y":0,
         "theta": 0,
         "ID":2,
-        "Radius":0.24,
+        "Radius":0.24, //*100
         "period":1681.601,
         "speed":17.905,
-        "name":"CERES",
+        "name":"Ceres",
         "discovered":2009,
         "class":"F",
         "temp":6475
@@ -39,7 +39,8 @@ var asteroids = [
         "class":"F",
         "temp":5466
     },
-    { "major":266.9311,
+    {
+        "major":266.9311,
         "minor":258.1055,
         "e":0.255,
         "focus":78.56,
@@ -59,7 +60,8 @@ var asteroids = [
         "temp":5190
     },
 
-    {"major":257.380,
+    {
+        "major":257.380,
         "minor":252.074,
         "e":0.202,
         "focus":51.99,
@@ -78,7 +80,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":238.621,
+    {
+        "major":238.621,
         "minor":229.904,
         "e":0.19113,
         "focus":63.90,
@@ -97,7 +100,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":220.20,
+    {
+        "major":220.20,
         "minor":217.49,
         "e":0.1563,
         "focus":34.44,
@@ -116,7 +120,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":238.64,
+    {
+        "major":238.64,
         "minor":236.85,
         "e":0.122,
         "focus":29.174,
@@ -135,7 +140,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":313.943,
+    {
+        "major":313.943,
         "minor":311.942,
         "e":0.1127,
         "focus":35.38,
@@ -154,7 +160,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":245.250,
+    {
+        "major":245.250,
         "minor":234.380,
         "e":0.10002,
         "focus":72.20,
@@ -173,7 +180,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":233.4,
+    {
+        "major":233.4,
         "minor":222.000,
         "e":0.221,
         "focus":72.05,
@@ -192,7 +200,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":257.621,
+    {
+        "major":257.621,
         "minor":255.738,
         "e":0.085,
         "focus":31.091,
@@ -211,7 +220,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":258.50,
+    {
+        "major":258.50,
         "minor":254.82,
         "e":0.168,
         "focus":43.46,
@@ -230,7 +240,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":264.31,
+    {
+        "major":264.31,
         "minor":259.64,
         "e":0.187,
         "focus":49.465,
@@ -249,7 +260,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":292.12,
+    {
+        "major":292.12,
         "minor":289.24,
         "e":0.140,
         "focus":40.918,
@@ -268,7 +280,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":247.01,
+    {
+        "major":247.01,
         "minor":244.782,
         "e":0.134,
         "focus":33.101,
@@ -287,7 +300,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":229.61,
+    {
+        "major":229.61,
         "minor":224.08,
         "e":0.218,
         "focus":50.08,
@@ -306,7 +320,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":244.11,
+    {
+        "major":244.11,
         "minor":241.01,
         "e":0.159,
         "focus":38.78,
@@ -325,7 +340,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":240.83,
+    {
+        "major":240.83,
         "minor":235.90,
         "e":0.143,
         "focus":48.47,
@@ -344,7 +360,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":243.52 ,
+    {
+        "major":243.52 ,
         "minor":240.22,
         "e":0.164,
         "focus":39.95,
@@ -363,7 +380,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":291.12,
+    {
+        "major":291.12,
         "minor":289.59,
         "e":0.10213,
         "focus":29.807,
@@ -382,7 +400,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":262.81,
+    {
+        "major":262.81,
         "minor":255.57,
         "e":0.233,
         "focus":61.26,
@@ -401,7 +420,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":312.91,
+    {
+        "major":312.91,
         "minor":311.20,
         "e":0.1310,
         "focus":32.66,
@@ -420,7 +440,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":240.0,
+    {
+        "major":240.0,
         "minor":232.06,
         "e":0.255,
         "focus":61.22,
@@ -439,7 +460,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":265.61,
+    {
+        "major":265.61,
         "minor":264.60,
         "e":0.087,
         "focus":23.14,
@@ -458,7 +480,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":234.81,
+    {
+        "major":234.81,
         "minor":231.31,
         "e":0.172,
         "focus":41.57,
@@ -477,7 +500,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":255.41,
+    {
+        "major":255.41,
         "minor":254.72,
         "e":0.073,
         "focus":20.18,
@@ -496,7 +520,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":236.71,
+    {
+        "major":236.71,
         "minor":234.82,
         "e":0.126,
         "focus":29.85,
@@ -515,7 +540,8 @@ var asteroids = [
         "class":"F",
         "temp":5663
     },
-    {"major":315.01,
+    {
+        "major":315.01,
         "minor":290.77,
         "e":0.226,
         "focus":121.17,
@@ -534,5 +560,4 @@ var asteroids = [
         "class":"F",
         "temp":5663
     }
-
 ];

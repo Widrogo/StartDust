@@ -93,6 +93,12 @@ If you want to checkout and run the project follow these steps:
 ``` git clone https://github.com/Widrogo/StartDust.git```
 
  and open the index.html in any explorer
-## Refers ##
+## Project Reference ##
+
+http://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion
 
 https://www.khanacademy.org/computer-programming/elliptic-orbit-with-the-correct-speed/1979432907
+
+## Bluemix link ##
+
+stardust.mybluemix.net
