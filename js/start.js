@@ -122,34 +122,6 @@ d3.select("svg")
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// Explanation Texts ////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-/*//Intro Text Wrapper
-var introText = svg.append("g").attr("class", "introWrapper");
-//.attr("transform", "translate(" + -x/2 + "," + -y/2 + ")");
-//Title				
-var Title = introText.append("text")
-	.attr("class", "title")
-	.attr("x", 10 + "px")
-	.attr("y", 10 + "px")
-	.attr("dy", "1em")
-	.style("fill","white")
-	.attr("opacity", 1)
-	.text("ASTEROIDES");
-	
-//Intro text	
-var TextIntro = introText.append("text")
-	.attr("class", "intro")
-	.attr("x", 10 + "px")
-    .attr("opacity", 0)
-	.attr("y", 40 + "px")
-	.attr("dy", "1em")
-	.style("fill","white")
-	.attr("opacity", 1)
-	.text("En astronomía, los objetos próximos a la Tierra (más conocidos por su acrónimo en inglés NEO, Near Earth Object) "+
-		  "son cometas y asteroides atrapados por la atracción del Sol o los distintos planetas, en órbitas que podrían hacerlos penetrar en las cercanías de la Tierra " +
-		  "Los cometas, formados en las regiones exteriores frías del Sistema Solar, están mayoritariamente compuestos de hielo y polvo. " +
-		  "Los asteroides, por su parte, son rocosos y se formaron entre las órbitas de Marte y Júpiter. Planetas como Júpiter, Saturno, Urano y Neptuno se formaron por agregación de miles de millones de cometas. " +
-		  "De la misma manera, Mercurio, Venus, la Tierra y Marte se formaron por la agregación inicial de otro gran número de asteroides. Los sobrantes constituyen los cometas y asteroides que conocemos hoy.")
-	.call(wrap, 300);*/
 
 
 //The explanation text during the introduction
@@ -162,8 +134,7 @@ var TextTop = container.append("text")
 	.attr("opacity", 0)
 	.text("");
 	
-//Create the legend
-createLegend();
+
 
 //Initiate the progress Circle
 var arc = d3.svg.arc()
@@ -329,17 +300,24 @@ function Ceres() {
 
 	startCircle(time = 33);
 
-    highlight(0, delayTime=2);
 
-	changeText("Este es EROS descubierto el 13 de agosto de 1898 por Carl Gustav Witt, desde el observatorio de Berlín. " +
-			   "Es el segundo asteroide cercano a la Tierra en tamaño. Mide 33 km de un extremo al otro. ",
+    //Dim all asteroids
+    dim(delayTime=0);
+
+
+    highlight(1, delayTime=2);
+
+
+
+	changeText("Ceres es el más pequeño de los planetas enanos dentro del sistema solar. Se ubica entre las órbitas de Marte y Júpiter. " +
+			   "Recibe su nombre en honor a la diosa romana de la agricultura, las cosechas y la fecundidad, Ceres.",
 				delayDisappear = 0, delayAppear = 1);
 
-	changeText("En el año 2000, Eros fue el primer asteroide en ser orbitado por una sonda espacial, la NEAR Shoemaker, " +
-        "que acabó aterrizando en la superficie del asteroide el 12 de febrero de 2001 (maniobra para la cual no estaba diseñada). ",
+	changeText("Inicialmente se lo consideró como un cometa, luego como un planeta, y posteriormente fue considerado el mayor asteroide descubierto por el hombre, " +
+               "hasta la creación de la categoría de «planeta enano», en 2006.",
         delayDisappear = 13, delayAppear = 15);
 
-    changeText("La sonda siguió transmitiendo datos desde la superficie del asteroide hasta el 28 de febrero de 2001.",
+    changeText("Este planeta enano contiene aproximadamente la tercera parte de la masa total del cinturón de asteroides.",
         delayDisappear = 28, delayAppear = 29);
 
 
@@ -350,24 +328,49 @@ function Pallas() {
 
 	startCircle(time = 26);
 
+    //Dim all asteroids again
+    dim(delayTime = 0);
 
 	//Highlight the biggest asteroid
-	highlight(235, delayTime=4);
-	changeText("Let's get back to WASP-12 b. The distance to the star it orbits is only 2% of the distance " +
-			   "between the Earth and the Sun",
+	highlight(2, delayTime=4);
+
+	changeText("Palas es el segundo más masivo (de mayor masa) asteroide del cinturón de asteroides. " +
+			   "beSu órbita está situada en la parte central del cinturón pero resulta algo inclinada y excéntrica para un asteroide grande.",
 				delayDisappear = 0, delayAppear = 3);
 
-	changeText("The distance between the Earth and the Sun is 150 million kilometers " +
-			   "and is called an Astronomical Unit, or 'au'. Thus the distance of WASP-12 b to its star is 0.02 au",
+	changeText("La órbita de Palas fue determinada por Gauss, quien encontró que el periodo de 4,6 años era similar al periodo de Ceres " +
+			   "Sin embargo, Palas tenía una inclinación orbital relativamente alta respecto al plano de la eclíptica",
 				delayDisappear = 12, delayAppear = 13);
 
-	changeText("This is extremely close. Even Mercury, the asteroid closest to our Sun, is stil 0.3 au away, which " +
-			   "would not fit on most regular screen sizes ",
+	changeText("No se han realizado observaciones telescópicas a Palas que hayan mostrado características de su estructura. " +
+			   ". Debido a su alta inclinación orbital, Palas es más difícil de alcanzar por una nave espacial que otros grandes asteroides.",
 				delayDisappear = 24, delayAppear = 25);						
 }//Pallas
 
 //Elliptical orbits 
 function Draw5() {
+
+    //Start progress button
+    startCircle(time = 15);
+
+    changeText("Hagamos un experimento. este no es un asteroide es el cometa  Haley" +
+        "y su excentricidad es de 0,967990",
+        delayDisappear = 1, delayAppear = 2, xloc=200, yloc = -24*1);
+
+    //Dim all asteroids again
+    dim(delayTime = 0);
+
+    //Highlight elliptical orbit
+    highlight(28, delayTime=2);
+
+    changeText("Permítanme acelerar las cosas un poco.  ¿Ves que el cometa se está moviendo más  " +
+        "rápido cuando se está cerca de la estrella? Si quieres saber por qué sucede eso , " +
+        "busca segunda ley de Kepler",
+        delayDisappear = 11, delayAppear = 15, xloc=200, yloc = -24*2);
+
+
+    setTimeout(function() {speedUp = 50;}, 700*8);
+
 
 
 }//Draw5
@@ -375,8 +378,38 @@ function Draw5() {
 //Colour of the asteroid
 function Draw6() {
 
+//Return asteroids to original speed
+    speedUp = 400;
 
-				
+    //Start progress button
+    startCircle(time = 14);
+
+    //Dim all asteroids again
+    dim(delayTime = 0);
+
+    //Bring all asteroids back
+    bringBack(opacity = 0.3, delayTime = 1);
+
+    changeText("El universo es hermoso, pero hay recordar que también es peligroso,  " +
+        "tenemos que estar consientes del peligro que hay allá en lo oscuro del espacio esto es Stardust app challenge.",
+        delayDisappear = 0, delayAppear = 1);
+
+    changeText("Dale un poco de color a los asteroides. ",
+        delayDisappear = 9, delayAppear = 13);
+
+
+
+    d3.select(".progressWrapper")
+        .transition().delay(700 * 35).duration(1000)
+        .style("opacity", 0);
+
+    d3.select("#crazy")
+        .style("visibility","visible")
+        .style("left", (x/2 - 112/2 + 6) + "px")
+        .style("top", (y/2 - 100) + "px")
+        .transition().delay(700 * 35).duration(1000)
+        .style("opacity", 1);
+
 }//Draw6
 
 //Switch between different gradient options of Easter Egg
@@ -402,23 +435,23 @@ d3.select("#crazy")
 			.transition().delay(1000)
 			.style("fill", "url(#gradientLinear)");
 		gradientChoice = "Rainbow";
-		
-		//Remove button				
-		d3.select("#crazy")
-			.transition().duration(2500)
-			.style("top", y + "px")
-			.style("left", 500 + "px")
-			.style("opacity", 0);
-		
-		//Truly remove the button after it has become invisible
-		setTimeout(function() {
-				d3.select("#crazy").style("visibility","hidden");
-			}, 2000);
-		
-		//Show the new button at the bottom
-		d3.select("#color")
-			.style("visibility", "visible")
-			.transition().delay(1500).duration(1000)
-			.style("opacity", 1);
+
+        //Remove button
+        d3.select("#crazy")
+            .transition().duration(2500)
+            .style("top", y + "px")
+            .style("left", 500 + "px")
+            .style("opacity", 0);
+
+        //Truly remove the button after it has become invisible
+        setTimeout(function() {
+            d3.select("#crazy").style("visibility","hidden");
+        }, 2000);
+
+        //Show the new button at the bottom
+        d3.select("#color")
+            .style("visibility", "visible")
+            .transition().delay(1500).duration(1000)
+            .style("opacity", 1);
 	});
 //});

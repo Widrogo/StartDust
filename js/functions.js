@@ -274,7 +274,6 @@ function endall(transition, callback) {
 		.each("end", function() { if (!--n) callback.apply(this, arguments); });
 }
 
-
 function updateWindow(){
 	x = w.innerWidth || e.clientWidth || g.clientWidth;
 	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
