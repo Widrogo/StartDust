@@ -42,7 +42,10 @@ d3.timer(function() {
 
 //Calculate the new x or y position per asteroid
 function locate(coord) {
+
 	return function(d){
+        console.log(arguments);
+        console.log(d);
 		var k = 360 * d.major * d.minor / (d.period * resolution * speedUp);
 
 		for (var i = 0; i < resolution; i++) {
