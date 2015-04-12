@@ -265,12 +265,10 @@ var counter = 1;
 d3.select(".progressWrapper")      
 	.on("click", function(e){
 
-		if(counter == 1) Eros();
-		else if(counter == 2) Apofis();
-		else if(counter == 3) Gaminedes();
-		else if(counter == 4) albert();
-		else if(counter == 5) Draw5();
-		else if(counter == 6) Draw6();
+		if(counter == 1) Ceres();
+		else if(counter == 2) Pallas();
+		else if(counter == 3) Draw5();
+		else if(counter == 4) Draw6();
 		
 		counter = counter + 1;
 	});
@@ -327,7 +325,7 @@ function Draw0(){
 }//function Draw0
 
 //Scaling radii	
-function Eros() {
+function Ceres() {
 
 	startCircle(time = 33);
 
@@ -345,28 +343,13 @@ function Eros() {
         delayDisappear = 28, delayAppear = 29);
 
 
-		
-    //d3.selectAll(".asteroid")
-    //    .transition().delay(700 * 2).duration(2000)
-    //    .attr("r", function(d) {
-    //        var newRadius = radiusJupiter/au*3000*d.Radius;
-    //        if  (newRadius < 1) {return 0;}
-    //        else {return newRadius;}
-    //    });
-
-}//function Draw1
+}//function Ceres
 
 //Radius of orbit
-function Apofis() {
+function Pallas() {
 
 	startCircle(time = 26);
 
-	//Dim all asteroids again
-	//dim(delayTime = 0);
-    ////Make asteroids bigger again
-    //d3.selectAll(".asteroid")
-    //	.transition().delay(700 * 1).duration(1500)
-    //	.attr("r", function(d) {return radiusSizer * d.Radius;});
 
 	//Highlight the biggest asteroid
 	highlight(235, delayTime=4);
@@ -381,127 +364,18 @@ function Apofis() {
 	changeText("This is extremely close. Even Mercury, the asteroid closest to our Sun, is stil 0.3 au away, which " +
 			   "would not fit on most regular screen sizes ",
 				delayDisappear = 24, delayAppear = 25);						
-}//Draw2
-
-//Orbital period
-function Gaminedes(){
-	startCircle(time = 18);
-	
-	changeText("The asteroids you see here are quite different from Earth because of more reasons. " +
-			   "The average time it takes these 288 asteroids to go around their star is only 17 Earth days! ",
-				delayDisappear = 0, delayAppear = 1);
-
-	changeText("WASP-12 b goes around in just 26 hours",
-				delayDisappear = 11, delayAppear = 12);	
-				
-	//Highlight an Earth like chosen asteroid
-	highlight(215, delayTime=16);
-	changeText("and Kepler-68 c in almost 10 days",
-				delayDisappear = 16, delayAppear = 17);			
-
-}//Draw3
-		
-
-//Elliptical orbits - Circles
-function albert(){
-
-	//Start progress button
-	startCircle(time = 22);
-	
-	changeText("Both of the asteroids highlighted now are on very circular orbits. " +
-			   "However, this is not always the case",
-				delayDisappear = 0, delayAppear = 1);	
-				
-	changeText("Most orbits are shaped more like stretched out circles: ellipses. " +
-			   "The 'eccentricity' describes how round or how stretched out an ellipse is",
-				delayDisappear = 10, delayAppear = 11);
-
-	changeText("If the eccentricity is close to 0, the ellipse is more like a circle, " +
-			   "like our asteroids here. However, if the eccentricity is close to 1, " +
-			   "the ellipse is long and skinny",
-				delayDisappear = 20, delayAppear = 21);
-				
-}//Draw4	
+}//Pallas
 
 //Elliptical orbits 
 function Draw5() {
 
-	//Start progress button
-	startCircle(time = 10);
-	
-	changeText("Here we have Kepler-75 b, which is already on a very stretched orbit. " +
-			   "Its eccentricity is 0.57",
-				delayDisappear = 1, delayAppear = 2, xloc=200, yloc = -24*1);
-				
-	//Dim all asteroids again
-	dim(delayTime = 0);
-	
-	//Highlight elliptical orbit
-	highlight(237, delayTime=2);
 
-	changeText("Let me speed things up a bit. Do you see that the asteroid is moving faster " +
-			   "when it is close to the star? If you want to know why that happens, " +
-			   "please look up Kepler's 2nd law",
-				delayDisappear = 8, delayAppear = 9, xloc=200, yloc = -24*2);
-	
-	
-	setTimeout(function() {speedUp = 50;}, 700*8);
-			
 }//Draw5
 
 //Colour of the asteroid
 function Draw6() {
 
-	//Return asteroids to original speed
-	speedUp = 400;
-	
-	//Start progress button
-	startCircle(time = 33);
-	
-	//Dim all asteroids again
-	dim(delayTime = 0);
-	
-	//Bring all asteroids back
-	bringBack(opacity = 0.3, delayTime = 1);
-		
-	changeText("Wondering about the color of the asteroids? They are colored according to " +
-			   "the approximate color of the star around which they orbit",
-				delayDisappear = 0, delayAppear = 1);
-				
-	changeText("Depending on the mass of a star, its temperature is different and therefore " +
-			   "the color in which we see it",
-				delayDisappear = 8, delayAppear = 9);
 
-	changeText("You can hover over the legend in the bottom right to highlight only asteroids" +
-			  "that rotate around similar stars",
-				delayDisappear = 16, delayAppear = 17);
-				
-	//Make legend invisible as to not distract
-	d3.select(".legendContainer").transition().delay(17 * 700).duration(2000).style("opacity", 1);
-	//Replace Legend events
-	d3.selectAll('.legend')
-		.on("mouseover", classSelect(0.04))
-		.on("mouseout", classSelect(asteroidOpacity));
-		
-	changeText("I'll admit, this coloring might be a bit confusing, since now they seem like little stars " +
-			   "orbiting our Sun",
-				delayDisappear = 24, delayAppear = 25);
-				
-	
-	changeText("However, seeing that we've come to the end of the introduction, I'll let you " +
-			   "decide what you like best...",
-				delayDisappear = 32, delayAppear = 33);
-				
-	d3.select(".progressWrapper")
-			.transition().delay(700 * 35).duration(1000)
-			.style("opacity", 0);
-	
-	d3.select("#crazy")
-		.style("visibility","visible")
-		.style("left", (x/2 - 112/2 + 6) + "px")
-		.style("top", (y/2 - 100) + "px")
-		.transition().delay(700 * 35).duration(1000)
-		.style("opacity", 1);		
 				
 }//Draw6
 
