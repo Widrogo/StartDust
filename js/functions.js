@@ -241,8 +241,6 @@ function dim(delayTime) {
 
 }//function dim
 
-
-//Taken from http://bl.ocks.org/mbostock/7555321
 //Wraps SVG text
 function wrap(text, width) {
 	var text = d3.select(this[0][0]),
@@ -268,7 +266,6 @@ function wrap(text, width) {
 	}
 };
 
-//Taken from https://groups.google.com/forum/#!msg/d3-js/WC_7Xi6VV50/j1HK0vIWI-EJ
 //Calls a function only after the total transition ends
 function endall(transition, callback) {
 	var n = 0;

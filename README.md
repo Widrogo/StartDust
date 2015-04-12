@@ -95,6 +95,8 @@ If you want to checkout and run the project follow these steps:
  and open the index.html in any explorer
 ## Project Reference ##
 
+http://www.astro.washington.edu/users/smith/Astro150/Tutorials/Kepler/
+
 http://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion
 
 https://www.khanacademy.org/computer-programming/elliptic-orbit-with-the-correct-speed/1979432907
