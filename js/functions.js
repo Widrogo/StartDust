@@ -274,7 +274,7 @@ function endall(transition, callback) {
 		.each("end", function() { if (!--n) callback.apply(this, arguments); });
 }
 
-//Outline taken from http://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
+
 function updateWindow(){
 	x = w.innerWidth || e.clientWidth || g.clientWidth;
 	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
